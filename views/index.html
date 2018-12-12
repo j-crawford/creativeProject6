@@ -1,0 +1,37 @@
+<!doctype html>
+<html ng-app="myApp"> 
+    
+<head>
+    <title>User Login and Sessions</title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />
+</head>
+        
+<body>  
+    <div ng-controller="myController">
+        <h2 id="welcomeText">Welcome. You are Logged In as
+            <%= username %>
+        </h2>
+        <a id="logoutLink" href="/logout">logout</a>
+        <a id="editLink" href="/user">Edit User</a>
+        
+        <p>Place Your Code Here
+            <p>
+        <img src="<%= pic %>" height="40px" width="40px" onerror="if(this.src != '/images/glitch.png') this.src = '/images/glitch.png';">
+    </div>
+    <hr>
+    <p style="color:black" > I like <%= color %> too!</p>
+    <span id="indexMsg">
+        <%= msg %>
+    </span>
+    <hr>
+    <span id="colorText">
+    Color
+        <%= color %>
+      </span>
+    <script src="http://code.angularjs.org/1.2.9/angular.min.js"></script>
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="/javascripts/my_app.js"></script>
+    <script>setColor("<%= color %>")</script>
+</body>
+      
+</html>
